@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script>
+    let diametro = 400;
+
+    function setup() {
+      createCanvas(600, 600);
+      background(220);
+      
+      fill(0, 0, 0);
+      circle(width / 2, height / 2, diametro);
+      
+      fill(255, 255, 255);
+      circle(width / 2, height / 2, diametro - 100);
+      
+      fill(0, 0, 0);
+      circle(width / 2, height / 2, diametro - 150);
+      
+      fill(255, 255, 255);
+      circle(width / 2, height / 2, diametro - 200);
+      
+      fill(0, 0, 0);
+      circle(width / 2, height / 2, diametro - 250);
+      
+      fill(255, 255, 255);
+      circle(width / 2, height / 2, diametro - 300);
+
+      fill(0, 0, 0);
+      circle(width / 2, height / 2, diametro - 350);
+    }
+
+    function draw() {
+    }
+
+    function mouseClicked() {
+      let d = dist(mouseX, mouseY, width / 2, height / 2);
+      let maxRadius = diametro / 2;
+      if (d <= maxRadius) {
+        console.log("Clic dentro il bersaglio!");
+      } else {
+        console.log("Clic fuori dal bersaglio!");
+      }
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
